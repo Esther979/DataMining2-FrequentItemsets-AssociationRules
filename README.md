@@ -16,7 +16,7 @@ The experiments were performed on the Groceries Dataset, containing:
 `python3 main.py --input Groceries_dataset.csv --min_support 10 --min_confidence 0.2`  
 
 ## Struction
-project/
+project/  
 │── apriori.py      # Frequent itemsets  
 │── rules.py        # Association rule generation (bonus)  
 │── main.py         # Main：read dataset and run  
