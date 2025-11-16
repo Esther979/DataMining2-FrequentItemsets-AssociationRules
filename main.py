@@ -96,7 +96,8 @@ def main():
     rules = generate_association_rules(frequent_itemsets, args.min_confidence)
     print(f"Total rules generated: {len(rules)}\n")
 
-    rules_sorted = sorted(rules, key=lambda x: (-x[3], -x[2]))
+    # rules_sorted = (X, Y, support, confidence)
+    rules_sorted = sorted(rules, key=lambda x: (-x[3], -x[2])) # Sort rules by confidence (descending), then by support (descending)
 
     print("===== TOP 50 RULES =====")
     for X, Y, supp, conf in rules_sorted[:50]:
